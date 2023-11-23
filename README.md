@@ -1,7 +1,7 @@
 # vadpcmbin-To-SoHAudioSample
 ## A tool to convert the vadpcm.bin files, created by z64audio.exe/z64rom, to the audio sample format that SoH, the Ocarina of Time PC Port , utilizes.
 
-* Step 1: Open your wav file in audacity (audio editing tool) and modify the sample rate value to be the same as the sample rate of the audio you want to replace then go to `Effect->Pitch and Tempo->Change Speed and Pitch` and modify the speed value until it sounds approximately normal again. Also, to check what's the sample rate of the audio you want to replace is, check the "Sounds" tab in [SoH Assets Guide](https://docs.google.com/spreadsheets/d/1rOTt_7Wr0OGfMR9tHom8dDOooM3rUocz9xi7axpR0sY/edit?usp=sharing)
+* Step 1: Open your wav file in audacity (audio editing tool) and modify the sample rate value to be the same as the sample rate of the audio you want to replace then go to `Effect->Pitch and Tempo->Change Speed and Pitch` and modify the speed value until it sounds approximately normal again. When exporting, make sure it's signed 16-bit float. Also, to check what's the sample rate of the audio you want to replace is, check the "Sounds" tab in [SoH Assets Guide](https://docs.google.com/spreadsheets/d/1rOTt_7Wr0OGfMR9tHom8dDOooM3rUocz9xi7axpR0sY/edit?usp=sharing)
 
 * Step 2: Use [z64audio](https://github.com/z64tools/z64audio/releases/tag/2.2.0) or z64rom to convert your WAV file to vadpcm.bin. It should create two files which are a .vadpcm.bin file and a config.toml file. Both of these are important. You can ignore/delete the .book.bin file.
 
@@ -14,4 +14,4 @@
 ## Note(s):
 * The audio will very likely sound kinda glitchy even after adjusting the sample rate and speed value in audacity. At the moment i'm writing this, i still don't know what's the fix for this. The glitchy effects can be considered by some as somewhat minor though.
 
-* Currently, SoH has a glitch that affects audio samples (even the original ones) where it finishes the audio too early than it's supposed to. Because of this, you should consider increasing the value of loop end by maybe 1000 to 3000 extra to try and get the sample to play completely in-game. Don't increase the "loop end" value too much because it might add noises if it exceeds how long it needs to be for the audio to play fully in-game.
+* Atm, it's recommended you use this build of SoH because loop start and loop count don't seem to work on regular branch. Also, loop end cuts off on regular branch so it's recommened to use this build to avoid all these issues. https://github.com/HarbourMasters/Shipwright/pull/3428
