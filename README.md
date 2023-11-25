@@ -5,7 +5,7 @@
 
 * Step 2: Use [z64audio](https://github.com/z64tools/z64audio/releases/tag/2.2.0) or z64rom to convert your WAV file to vadpcm.bin. It should create two files which are a .vadpcm.bin file and a config.toml file. Both of these are important. You can ignore/delete the .book.bin file.
 
-* Step 3: Use vadpcmToSample. When you first use the tool, it will open a pop-up screen and you need to select any SoH audio sample so the tool can acquire neccessary information. `(you can extract SoH audio samples using MPQ-Editor and opening oot.otr that SoH generates and navigating to audio/samples/ folder and extacting any of the files from there.)` After providing a SoH audio sample, the tool will create a `config.bruh` file in the same folder as the tool and will close itself. You shouldn't see that pop-up again when re-opening the tool.
+* Step 3: Use vadpcmToSample. When you first use the tool, it will open a pop-up screen and you need to select a voice/sfx SoH audio sample so the tool can acquire neccessary information. `(you can extract SoH audio samples using MPQ-Editor and opening oot.otr that SoH generates and navigating to audio/samples/ folder and extacting any of the voice/sfx sample files from there.)` After providing a SoH audio sample, the tool will create a `config.bruh` file in the same folder as the tool and will close itself. You shouldn't see that pop-up again when re-opening the tool.
 
 * Step 4: Re-open vadpcmToSample and open the vadpcm.bin file (make sure the config.toml file is in the same folder as vadpcm.bin). The tool should automatically adjust the "loop start", "loop end", and "loop count" values to be same as the values that z64audio creates.
 
@@ -14,4 +14,4 @@
 ## Note(s):
 * The audio will very likely sound kinda glitchy even after adjusting the sample rate and speed value in audacity. At the moment i'm writing this, i still don't know what's the fix for this. The glitchy effects can be considered by some as somewhat minor though.
 
-* Atm, it's recommended you use this build of SoH because loop start and loop count don't seem to work on regular branch. Also, loop end cuts off on regular branch so it's recommened to use this build to avoid all these issues. https://github.com/HarbourMasters/Shipwright/pull/3428
+* Until SoH 8.0.3 releases (or 8.1.0), it's recommended you use this build of SoH because loop start and loop count don't seem to work on macReady version 8.0.2 and less. Also, loop end cuts off on macReady 8.0.2 and less so it's recommened to use this build until 8.0.3 or 8.1.0 releases to avoid all these issues. https://github.com/HarbourMasters/Shipwright/pull/3428
