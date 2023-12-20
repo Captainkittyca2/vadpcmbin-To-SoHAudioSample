@@ -14,4 +14,4 @@
 ## Note(s):
 * The audio will very likely sound kinda glitchy even after adjusting the sample rate and speed value in audacity. At the moment i'm writing this, i still don't know what's the fix for this. The glitchy effects can be considered by some as somewhat minor though.
 
-* Until SoH 8.0.3 releases (or 8.1.0), it's recommended you use this build of SoH because loop start and loop count don't seem to work on macReady version 8.0.2 and less. Also, loop end cuts off on macReady 8.0.2 and less so it's recommened to use this build until 8.0.3 or 8.1.0 releases to avoid all these issues. https://github.com/HarbourMasters/Shipwright/pull/3428
+* Use SoH 8.0.3 or above.
